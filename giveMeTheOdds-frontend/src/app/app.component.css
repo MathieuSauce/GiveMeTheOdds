@@ -1,0 +1,37 @@
+h1 {
+    color:black;
+    font-size: min(5vh, 5vw);
+}
+
+.top-bar-text{
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: min(10vw, 10vh);
+    height : 20vh;
+    line-height: 20vh;
+}
+
+body{
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: min(3vh, 3vw);
+}
+
+html{
+    height: 100%;
+}
+
+.content-box{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    position: 50% 50%;
+}
+
+.top-bar{
+    height: 20vh;
+    background-color: #2E2E2E;
+    padding: 0px;
+    
+}
+

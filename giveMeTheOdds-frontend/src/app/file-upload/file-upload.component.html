@@ -1,0 +1,43 @@
+<input type="file" class="file-input"
+       (change)="onFileSelected($event)" #fileUpload>
+
+<div class="file-upload">
+
+    <button color="primary" class="button"
+      (click)="fileUpload.click()">
+        Choose file
+    </button>
+
+    
+
+    <button color="primary" class="button"
+        (click)="upload()">
+        Upload Chosen Empire File
+    </button>
+
+
+    <button color = "primary" class="button"
+        (click) ="getBestItinerary()">
+        Get Best Itinerary
+    </button>
+
+    <div class="chosen-file" id="chosen-file">
+        Chosen file : 
+        {{fileName || "No file chosen yet."}}
+    </div>
+
+    <div class="uploaded-file" id="uploaded-file">
+        Uploaded file :{{fileName}}
+    </div>
+    
+    <div *ngIf="isError" class="error">
+        {{error}}
+    </div>
+
+    <div *ngIf="gotResults" class="results">
+        The crew can reach {{planet}} with a probability of {{probability}}% on day {{day}}.
+        <br/>
+        Using this itinerary : {{planetList}}
+    </div>
+
+</div>
