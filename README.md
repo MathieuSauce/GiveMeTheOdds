@@ -27,6 +27,9 @@ cd giveMeTheOdds-frontend
 ng serve -o
 ~~~
 
+Please note that you will need Angular CLI installed to run the server.  
+You may get it by following the tutorial at this URL : https://angular.io/cli  
+
 <p>You can now access the front-end at http://localhost:4200 (Note that -o in the last command should open that window for you)</p>
 
 <h3>2. Command Line version</h3>
