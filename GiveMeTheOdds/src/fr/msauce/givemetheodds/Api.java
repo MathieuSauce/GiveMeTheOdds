@@ -6,6 +6,11 @@ import static spark.Spark.post;
 
 import org.json.JSONObject;
 
+
+/*
+ * Handles the api requests
+ */
+
 public class Api {
 
 	private EmpireInfo empireInfo;
@@ -14,6 +19,11 @@ public class Api {
 	public Api(PathFinder pathfinder) {
 		this.pathfinder = pathfinder;
 	}
+	
+	/*
+	 * Generates all necessary API request for the front-end to use
+	 * 
+	 */
 
 	public void generateApiRequests() {
 
@@ -37,10 +47,8 @@ public class Api {
 				return json;
 			}
 
-			pathfinder.setEmpireInfo(empireInfo);
-			pathfinder.generateRoutesGraph();
-			pathfinder.calculatePaths();
-			Itinerary itinerary = pathfinder.getBestItinerary();
+			
+			Itinerary itinerary = pathfinder.runPathFinder(empireInfo);
 
 			JSONObject json = JsonParser.generateJsonFromItinerary(itinerary);
 

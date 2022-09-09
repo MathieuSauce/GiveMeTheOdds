@@ -4,7 +4,16 @@ import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
+/*
+ * Main class for the CLI
+ */
 public class CliMain {
+	
+	/*
+	 * Runnable for the CLI
+	 * @param String 	Path to the falcon info json file
+	 * @param String	Path to the empire info json file
+	 */
 
 	private static void runCliProgram(String falconInfoPath, String empireInfoPath) {
 		EmpireInfo empireInfo = JsonParser.parseEmpireFromFile(empireInfoPath);
@@ -13,9 +22,7 @@ public class CliMain {
 		dbParser.connect(dbParser.computePath(falconInfo.getDbPath(), falconInfoPath));
 		ArrayList<Route> routes = dbParser.getRoutes();
 		PathFinder pathFinder = new PathFinder(empireInfo, falconInfo, routes);
-		pathFinder.generateRoutesGraph();
-		pathFinder.calculatePaths();
-		System.out.println(pathFinder.getBestItinerary().getProbability());
+		System.out.println(pathFinder.runPathFinder().getProbability());
 	}
 
 	public static void main(String[] args) {

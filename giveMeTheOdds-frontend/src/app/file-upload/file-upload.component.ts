@@ -17,7 +17,7 @@ export class FileUploadComponent implements OnInit {
   probability : number
   day : number
   planet : string
-  planetList : string[]
+  itinerary : string[]
 
   constructor(private httpClient : HttpClient) {
 
@@ -66,8 +66,8 @@ export class FileUploadComponent implements OnInit {
         this.day = data[key]
       } else if (key == "destination"){
         this.planet = data[key]
-      } else if (key == "planetList"){
-        this.planetList = data[key]
+      } else if (key == "itinerary"){
+        this.itinerary = data[key]
       }
     })
     this.gotResults = true

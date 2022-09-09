@@ -10,8 +10,19 @@ import java.util.HashMap;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-
+/*
+ * Handles the parsing of Json
+ * 
+ */
 public class JsonParser {
+	
+	
+	/*
+	 * Parses Empire info json file into EmpireInfo class
+	 * @param String 		Path to the Empire json File
+	 * @return EmpireInfo	Empire information from the file
+	 * 
+	 */
 	
 	public static EmpireInfo parseEmpireFromFile(String filePath) {
 
@@ -33,6 +44,13 @@ public class JsonParser {
 
 	}
 	
+	/*
+	 * Parses Empire info from a json string
+	 * @param String 		json string to parse
+	 * @return EmpireInfo	Empire information from the string
+	 * 
+	 */
+	
 	
 	public static EmpireInfo parseEmpireFromJson(String json) {
 		JSONObject jsonObject = new JSONObject(json);
@@ -53,6 +71,12 @@ public class JsonParser {
 		}
 		return new EmpireInfo(bountyHuntersMap, countdown);
 	}
+	
+	/*
+	 * Parses MilleniumFalconInfo in the file pointed by given filePath
+	 * @param String				Path to the file
+	 * @return MilleniumFalconInfo	Informations in the file
+	 */
 	
 	public static MilleniumFalconInfo parseFalconInfoFromFile(String filePath) {
 		String json = "";
@@ -78,12 +102,18 @@ public class JsonParser {
 		
 	}
 	
+	/*
+	 * Compiles given itinerary into a JsonObject
+	 * @param Itinerary 	Itinerary to compile
+	 * @return JSONObject	JSONObject associated
+	 */
+	
 	
 	public static JSONObject generateJsonFromItinerary(Itinerary itinerary) {
 		JSONObject jsonObject = new JSONObject()
 				.put("probability", itinerary.getProbability())
 				.put("day", itinerary.getDay())
-				.put("planetList", itinerary.getVisitedPlanet())
+				.put("itinerary", itinerary.getItinerary())
 				.put("destination", itinerary.getCurrentPlanet());
 		return jsonObject;
 	}

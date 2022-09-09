@@ -3,6 +3,13 @@ package fr.msauce.givemetheodds;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/*
+ * Represents the information on the empire
+ * @field HashMap<String, ArrayList<Integer>> 	Map of the bounty hunters position
+ * @field int 									Countdown till the death star destroys endor
+ */
+
+
 public class EmpireInfo {
 	private HashMap<String, ArrayList<Integer>> bountyHuntersMap;
 	private int countdown;

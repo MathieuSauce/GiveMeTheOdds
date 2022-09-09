@@ -1,5 +1,14 @@
 package fr.msauce.givemetheodds;
 
+/*
+ * Represents the information of the Millenium Falcon
+ * @field int 		Autonomy of the ship
+ * @field String	Departure planet 
+ * @field String	Arrival planet
+ * @field String	Path to the database (absolute or relative to the falcon info path)
+ * 
+ */
+
 public class MilleniumFalconInfo {
 	private int autonomy;
 	private String departure;

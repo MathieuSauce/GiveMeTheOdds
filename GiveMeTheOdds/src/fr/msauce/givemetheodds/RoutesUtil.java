@@ -5,6 +5,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class RoutesUtil {
+	
+	/*
+	 * Creates the list of route from the results of the database calls
+	 * @param ResultSet 	Results of the database call
+	 */
 
 	public static ArrayList<Route> createRoutesFromResultSet(ResultSet resultSet) throws SQLException {
 		ArrayList<Route> routes = new ArrayList<Route>();
