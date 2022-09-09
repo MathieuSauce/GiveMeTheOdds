@@ -13,9 +13,12 @@ And the front end under giveMeTheOdds-frontend.
 
 <h3>1. Server + frontEnd version</h3>
 
-<p>To run the server, please first clone the repository.<br>  
-Using your favorite IDE, you'll find the class named "Main" in the project under src/fr/msauce/giveMeTheOdds.<br>  
-Run the class to launch the server.</p>
+To run the server, please first clone the repository.   
+Using your favorite IDE, you'll find the class named "Main" in the project under **src/fr/msauce/giveMeTheOdds**.   
+Run the class to launch the server.   
+
+Please note that this project is compiled using JDK16.  
+You might encounter issues if you happen to use an older version.  
 
 <p>Once you've launched the server, launch a terminal from the root of the project and do : </p>
 
