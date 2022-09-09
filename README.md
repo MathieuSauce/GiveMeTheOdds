@@ -35,7 +35,7 @@ You may get it by following the tutorial at this URL : https://angular.io/cli
 <h3>2. Command Line version</h3>
 
 <p>To use the Command Line version of the program, please first clone the repository.<br>  
-Using a terminal, do :</p>
+Using a terminal from the project's root, do :</p>
 
 ~~~
 cd GiveMeTheOdds/target
